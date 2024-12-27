@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import './ReactProject2.css';
+
 
 function ReactProject2() {
 
@@ -27,13 +29,6 @@ function ReactProject2() {
 
     // console.log(formData)
 
-
-    // function to print the form data onsubmit
-    // let dataVisible = false
-    // const showData = (dataVisible) => {
-    //     dataVisible = !dataVisible
-    // }
-
     const handleSubmit = (event) => {
         event.preventDefault()
         setDataVisible(dataVisible => !dataVisible)
@@ -51,7 +46,7 @@ function ReactProject2() {
     return (
         <>
             <h1>Test React Project 2</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} class="project-form">
                 <label>Username:
                     <input type="text" value={formData.username} onChange={handleChange} name="username" />
                 </label>
@@ -68,9 +63,9 @@ function ReactProject2() {
                     <div>
                         <h1>Request Sent to DB with below request data</h1><br />
                         <ul>
-                            <li>Username: {storedFormData.username}</li>
-                            <li>Fullname: {storedFormData.fullname}</li>
-                            <li>Age: {storedFormData.age}</li>
+                            <li style={{ fontSize: '20px' }}>Username: {storedFormData.username}</li>
+                            <li style={{ fontSize: '20px' }}>Fullname: {storedFormData.fullname}</li>
+                            <li style={{ fontSize: '20px' }}>Age: {storedFormData.age}</li>
                         </ul>
                     </div> : <></>}
             </div>

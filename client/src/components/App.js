@@ -6,7 +6,7 @@ import ReactProject2 from "./ReactProject2";
 function App() {
   return (
     <>
-      <h1>Project Client</h1>;
+      {/* <h1>Project Client</h1>; */}
       <ReactProject2 />
     </>
   )
