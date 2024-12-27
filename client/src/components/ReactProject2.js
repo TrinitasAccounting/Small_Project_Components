@@ -12,6 +12,12 @@ function ReactProject2() {
 
     const [dataVisible, setDataVisible] = useState(false)
 
+    const [storedFormData, setStoredFormData] = useState({
+        username: "",
+        fullname: "",
+        age: ""
+    })
+
 
     // function to handle form update
     const handleChange = (event) => {
@@ -31,6 +37,7 @@ function ReactProject2() {
     const handleSubmit = (event) => {
         event.preventDefault()
         setDataVisible(dataVisible => !dataVisible)
+        setStoredFormData({ ...formData })
         setFormData({
             username: "",
             fullname: "",
@@ -57,7 +64,15 @@ function ReactProject2() {
                 <button type="submit">Submit</button>
             </form>
             <div>
-                {dataVisible ? <h1>Request Sent to DB with below request data</h1> : <></>}
+                {dataVisible ?
+                    <div>
+                        <h1>Request Sent to DB with below request data</h1><br />
+                        <ul>
+                            <li>Username: {storedFormData.username}</li>
+                            <li>Fullname: {storedFormData.fullname}</li>
+                            <li>Age: {storedFormData.age}</li>
+                        </ul>
+                    </div> : <></>}
             </div>
         </>
     )
