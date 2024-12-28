@@ -6,20 +6,9 @@ import ReactProjectTodo from "./ReactProject-Todo";
 
 function App() {
 
-  // const addCities = () => {
-
-
-  // }
-
   const [cities, setCities] = useState([]);
 
   // Delete city function
-  // const deleteCity = (cityToDelete) => {
-  //   cities.filter((city) => (
-  //     city.cityName !== cityToDelete
-  //   ))
-  // }
-
   const deleteCity = (cityToDelete) => {
     setCities(cities.filter((city) => city !== cityToDelete))
   }
@@ -35,7 +24,7 @@ function App() {
     </>
   ))
 
-  console.log(cities)
+
 
 
 
@@ -43,10 +32,10 @@ function App() {
     <>
       {/* <h1>Project Client</h1>; */}
       {/* <ReactProject2 /> */}
-      <ReactProjectTodo cities={cities} setCities={setCities} />
+      {/* <ReactProjectTodo cities={cities} setCities={setCities} />
       <ul>
         {citiesToDisplay}
-      </ul>
+      </ul> */}
     </>
   )
 }
