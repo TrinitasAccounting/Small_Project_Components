@@ -3,6 +3,8 @@ import { Switch, Route } from "react-router-dom";
 
 import ReactProject2 from "./ReactProject2";
 import ReactProjectTodo from "./ReactProject-Todo";
+import TimerComponent from "./TImerAndButton_Component/Timer";
+import ButtonCounter from "./TImerAndButton_Component/Button";
 
 function App() {
 
@@ -36,6 +38,8 @@ function App() {
       <ul>
         {citiesToDisplay}
       </ul> */}
+      {/* <TimerComponent /> */}
+      <ButtonCounter />
     </>
   )
 }
