@@ -6,6 +6,14 @@ import ReactProjectTodo from "./ReactProject-Todo";
 import TimerComponent from "./TImerAndButton_Component/Timer";
 import ButtonCounter from "./TImerAndButton_Component/Button";
 
+import Navbar from "./Navbar/Navbar";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
+import AboutPage from "./Navbar/AboutPage";
+import ProfilePage from "./Navbar/ProfilePage";
+import HomePage from "./Navbar/HomePage";
+
+
+
 function App() {
 
   const [cities, setCities] = useState([]);
@@ -62,6 +70,23 @@ function App() {
 
   return (
     <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+          <Route
+            path="/about"
+            element={<AboutPage />}
+          />
+          <Route
+            path="/profile"
+            element={<ProfilePage />}
+          />
+        </Routes>
+      </Router>
       {/* <h1>Project Client</h1>; */}
       {/* <ReactProject2 /> */}
       {/* <ReactProjectTodo cities={cities} setCities={setCities} />
@@ -70,10 +95,11 @@ function App() {
       </ul> */}
       {/* <TimerComponent /> */}
       {/* <ButtonCounter /> */}
-      <h2>id: {dataFetched.id}</h2>
+      {/* <h2>id: {dataFetched.id}</h2>
       <h3>title: {dataFetched.title}</h3>
       <h4>body: {dataFetched.body}</h4>
-      <button onClick={handleClickOfNextPost} style={{ backgroundColor: 'purple', color: 'white' }}>Next Post</button>
+      <button onClick={handleClickOfNextPost} style={{ backgroundColor: 'purple', color: 'white' }}>Next Post</button> */}
+
     </>
   )
 }
