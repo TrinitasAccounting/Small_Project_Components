@@ -35,34 +35,34 @@ function App() {
   // Fetch data component
 
 
-  const [dataFetched, setDataFetched] = useState("")
-  const [index, setIndex] = useState(1)
+  // const [dataFetched, setDataFetched] = useState("")
+  // const [index, setIndex] = useState(1)
 
-  // Fetch function from the url provided
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${index}`)
-      .then(res => {
-        if (res.ok) {
-          res.json().then(data => setDataFetched(data))
-        }
-      })
-  }, [index])
+  // // Fetch function from the url provided
+  // useEffect(() => {
+  //   fetch(`https://jsonplaceholder.typicode.com/posts/${index}`)
+  //     .then(res => {
+  //       if (res.ok) {
+  //         res.json().then(data => setDataFetched(data))
+  //       }
+  //     })
+  // }, [index])
 
-  console.log(dataFetched);
+  // console.log(dataFetched);
 
 
-  // function to increment the index
-  const handleClickOfNextPost = () => {
-    if (index < 6) {
-      setIndex(() => index + 1)
-    }
-    else {
-      setIndex(1)
-    }
-    // setIndex(() => index + 1)
-  }
+  // // function to increment the index
+  // const handleClickOfNextPost = () => {
+  //   if (index < 6) {
+  //     setIndex(() => index + 1)
+  //   }
+  //   else {
+  //     setIndex(1)
+  //   }
+  //   // setIndex(() => index + 1)
+  // }
 
-  console.log(index)
+  // console.log(index)
 
 
 
