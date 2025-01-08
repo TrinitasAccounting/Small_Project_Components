@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutPage from "./Navbar/AboutPage";
 import ProfilePage from "./Navbar/ProfilePage";
 import HomePage from "./Navbar/HomePage";
+import SortableListPage from "./Navbar/SortableListPage";
 
 
 
@@ -84,6 +85,10 @@ function App() {
           <Route
             path="/profile"
             element={<ProfilePage />}
+          />
+          <Route
+            path="/sortablelist"
+            element={<SortableListPage />}
           />
         </Routes>
       </Router>
